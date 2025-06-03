@@ -1,23 +1,26 @@
 public class User implements Comparable<User>{
 
-    // Attributes
+    // ---------- Attributes ----------
     private String name;
     private String password;
     private String email;
     private String phoneNumber;
     private String countryCode = "+45 ";
 
-    // Constructors
+
+    // ---------- Constructors ----------
     User(String name, String password){
         this.name = name;
         this.password = password;
     }
+
 
     User(String name, String password, String email){
         this.name = name;
         this.password = password;
         this.email = email;
     }
+
 
     User(String name, String password, String email, String phoneNumber){
         this.name = name;
@@ -26,7 +29,8 @@ public class User implements Comparable<User>{
         this.phoneNumber = phoneNumber;
     }
 
-    // Methods
+
+    // ---------- Methods ----------
     @Override
     public String toString(){
         String message = buildUserDetails();
@@ -49,13 +53,13 @@ public class User implements Comparable<User>{
             return message;
     }
 
+
     @Override
     public int compareTo(User user){
         // Use String method compareTo to return either -1, 0 or 1
         int result = this.name.compareTo(user.getName());
         return result;
     }
-
 
 
     // Accessors

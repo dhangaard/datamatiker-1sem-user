@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class UserDataValidator {
 
-    // Attributes
+    // ---------- Attributes ----------
     private User user;
     private final String errorMessage = "Error: Following user not created: ";
 
 
-    // Methods
+    // ---------- Methods ----------
     public void addUserToList(User user, ArrayList<User> users){
         if (user != null){
             users.add(user);
@@ -51,13 +51,14 @@ public class UserDataValidator {
         return null;
     }
 
+
     // Validation methods
     private boolean validateName(String name){
-        if (name.trim().length() <= 2){ // Name consists of at least 2 characters
+        if (name.trim().length() <= 2){
             return false;
         }
 
-        if (!name.matches("^[A-Z].*")){ // First character in name is upper case
+        if (!name.matches("^[A-Z].*")){
             return false;
         }
         return true;
@@ -69,23 +70,23 @@ public class UserDataValidator {
             return false;
         }
 
-        if (password.length() < 8) { // Password at least 6 characters long
+        if (password.length() < 8) {
             return false;
         }
 
-        if (!password.matches(".*[A-Z].*")) { // Password includes at least one upper case letter
+        if (!password.matches(".*[A-Z].*")) {
             return false;
         }
 
-        if (!password.matches(".*[a-z].*")) { // Password includes at least one lower case letter
+        if (!password.matches(".*[a-z].*")) {
             return false;
         }
 
-        if (!password.matches(".*\\d.*")) { // Password includes at least one digit
+        if (!password.matches(".*\\d.*")) {
             return false;
         }
 
-        if(!password.matches(".*[\\p{Punct}].*")){ // Password includes at least one special character
+        if(!password.matches(".*[\\p{Punct}].*")){
             return false;
         }
         return true;
@@ -93,7 +94,7 @@ public class UserDataValidator {
 
 
     private boolean validateEmail(String email){
-        if (!email.matches("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$")) { // Email follows correct format
+        if (!email.matches("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$")) {
             return false;
         }
         return true;
@@ -101,7 +102,7 @@ public class UserDataValidator {
 
 
     private boolean validatePhoneNumber(String phoneNumber){
-        if (!phoneNumber.matches("\\d{8}")){ // Phone number consists of exactly eight digits
+        if (!phoneNumber.matches("\\d{8}")){
             return false;
         }
         return true;

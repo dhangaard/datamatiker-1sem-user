@@ -11,7 +11,7 @@ public class Main {
 
         // To generate user:
         // Name: Initial character must be uppercase, first name only, minimum length of 2 characters
-        // Password: Must consist of at least XX characters with a min. of one uppercase, one lowercase and one integer
+        // Password: Must consist of at least 8 characters with a min. of one uppercase, one lowercase and one integer
         // Email: Must follow format "example@domain.com" with valid characters (lowercase, integers and special characters) and domain
         // Phone number: Must be a String where only integers are accepted, must have a length of precisely 8 characters, no spacing
 
